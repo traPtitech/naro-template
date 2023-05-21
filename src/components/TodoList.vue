@@ -48,14 +48,14 @@ const finishTask = (taskName: string) => {
   <div>
     <div>TodoList</div>
     <div>完了済みタスク一覧</div>
-    <ul v-for="task in finishedTasks" :key="task.name">
-      <li>
+    <ul>
+      <li v-for="task in finishedTasks" :key="task.name">
         <div>{{ task.name }}</div>
       </li>
     </ul>
     <div>未完タスク一覧</div>
-    <ul v-for="task in notFinishedTasks" :key="task.name">
-      <li>
+    <ul>
+      <li v-for="task in notFinishedTasks" :key="task.name">
         <div>{{ task.name }}</div>
         <div>
           <button @click="finishTask(task.name)">完了する</button>
