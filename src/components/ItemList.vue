@@ -22,11 +22,12 @@ const addItem = () => {
   <div>
     <div>ItemList</div>
     <div v-for="item in items" :key="item.name">
-      <div>
-        <div>名前: {{ item.name }}</div>
-        <div>{{ item.price }} 円</div>
-      </div>
-    </div>
+			<div :class="{ over500: item.price >= 500 }">
+				<div>名前: {{ item.name }}</div>
+				<div>{{ item.price }} 円</div>
+				<div v-if="item.price >= 10000">高額商品</div>
+			</div>
+		</div>
     <div>
       <label>
         名前
@@ -36,9 +37,13 @@ const addItem = () => {
         価格
         <input v-model="newItemPrice" type="number" />
       </label>
-      <button @click="addItem">追加</button>
+      <button @click="addItem">add</button>
     </div>
   </div>
 </template>
 
-<style></style>
+<style>
+.over500 {
+  color: red;
+}
+</style>
