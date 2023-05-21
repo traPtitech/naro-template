@@ -21,13 +21,13 @@ const addItem = () => {
 <template>
   <div>
     <div>ItemList</div>
-    <div v-for="item in items" :key="item.name">
-			<div :class="{ over500: item.price >= 500 }">
-				<div>名前: {{ item.name }}</div>
-				<div>{{ item.price }} 円</div>
-				<div v-if="item.price >= 10000">高額商品</div>
-			</div>
-		</div>
+    <ul v-for="item in items" :key="item.name">
+      <li :class="{ over500: item.price >= 500 }">
+        <div>名前: {{ item.name }}</div>
+        <div>{{ item.price }} 円</div>
+        <div v-if="item.price >= 10000">高額商品</div>
+      </li>
+    </ul>
     <div>
       <label>
         名前
