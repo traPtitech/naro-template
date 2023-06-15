@@ -15,7 +15,10 @@ export default function ItemList() {
 	const [newItemPrice, setNewItemPrice] = useState(0)
 
 	const addItem = () => {
+		if (newItemName === "" || newItemPrice === 0) return // buttonタグでdesabledを指定してもよい
 		setItems([...items, { name: newItemName, price: newItemPrice }])
+		setNewItemName("")
+		setNewItemPrice(0)
 	}
 
 	return (
