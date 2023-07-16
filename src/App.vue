@@ -6,6 +6,8 @@
         |
         <router-link to="/ping">Ping</router-link>
         |
+        <router-link to="/city/Tokyo">Tokyo</router-link>
+        |
         <router-link to="/login">Login</router-link>
       </header>
 
