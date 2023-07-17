@@ -15,7 +15,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'http://locslhost:8080', // 前回のサーバーのアドレスと自分のポートの組にする
+        target: 'http://localhost:8080', // 前回のサーバーのアドレスと自分のポートの組にする
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, '/')
       }
