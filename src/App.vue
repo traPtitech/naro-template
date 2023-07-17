@@ -8,6 +8,8 @@
         |
         <router-link to="/cityselect">City select</router-link>
         |
+        <router-link to="/countries">Country List</router-link>
+        |
         <router-link to="/city/Tokyo">Tokyo</router-link>
         |
         <router-link to="/login">Login</router-link>
